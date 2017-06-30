@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +22,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前を入力してください。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5D-g3-OhB">
-                                <rect key="frame" x="83" y="80" width="208" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5D-g3-OhB">
+                                <rect key="frame" x="66" y="70" width="243" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGL-0I-4Wd">
-                                <rect key="frame" x="139" y="184" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGL-0I-4Wd">
+                                <rect key="frame" x="116" y="141" width="143" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za8-Dw-1uF">
-                                <rect key="frame" x="172" y="318" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za8-Dw-1uF">
+                                <rect key="frame" x="166" y="321" width="43" height="30"/>
                                 <state key="normal" title="次へ"/>
                                 <connections>
                                     <segue destination="Rs9-7s-O2X" kind="show" id="Sgs-Xs-XbO"/>
@@ -45,6 +43,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sGL-0I-4Wd" firstAttribute="top" secondItem="Y5D-g3-OhB" secondAttribute="bottom" constant="50" id="CYL-p4-inn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y5D-g3-OhB" secondAttribute="trailing" constant="50" id="LN2-gg-DW6"/>
+                            <constraint firstItem="za8-Dw-1uF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="150" id="Nzs-Gh-UDq"/>
+                            <constraint firstItem="sGL-0I-4Wd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="Po3-nf-fu3"/>
+                            <constraint firstItem="Y5D-g3-OhB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="S25-TO-Ha7"/>
+                            <constraint firstItem="za8-Dw-1uF" firstAttribute="top" secondItem="sGL-0I-4Wd" secondAttribute="bottom" constant="150" id="gSD-Ke-d90"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sGL-0I-4Wd" secondAttribute="trailing" constant="100" id="nNu-lV-CE3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="za8-Dw-1uF" secondAttribute="trailing" constant="150" id="pR7-7T-uX2"/>
+                            <constraint firstItem="Y5D-g3-OhB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="rih-fT-5tb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="WriteName" destination="sGL-0I-4Wd" id="lz2-cX-jrr"/>
@@ -65,23 +74,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLj-ir-g5G">
-                                <rect key="frame" x="172" y="307" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLj-ir-g5G">
+                                <rect key="frame" x="166" y="241" width="43" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="gYU-n9-ACv" kind="unwind" unwindAction="backhome:" id="Air-ii-CQs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ようこそ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK3-pf-RGc">
-                                <rect key="frame" x="6" y="72" width="369" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ようこそ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK3-pf-RGc">
+                                <rect key="frame" x="50" y="70" width="275" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TLj-ir-g5G" secondAttribute="trailing" constant="150" id="8Py-BH-Y9P"/>
+                            <constraint firstItem="qK3-pf-RGc" firstAttribute="top" secondItem="meg-at-wo3" secondAttribute="bottom" constant="50" id="BjY-zH-5OO"/>
+                            <constraint firstItem="TLj-ir-g5G" firstAttribute="leading" secondItem="6Ya-TE-4Ng" secondAttribute="leadingMargin" constant="150" id="Zl9-UP-CJa"/>
+                            <constraint firstItem="qK3-pf-RGc" firstAttribute="leading" secondItem="6Ya-TE-4Ng" secondAttribute="leading" constant="50" id="aXD-Zl-zfN"/>
+                            <constraint firstItem="TLj-ir-g5G" firstAttribute="top" secondItem="qK3-pf-RGc" secondAttribute="bottom" constant="150" id="bYj-1F-vIG"/>
+                            <constraint firstAttribute="trailing" secondItem="qK3-pf-RGc" secondAttribute="trailing" constant="50" id="bza-dR-PZp"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="YourName" destination="qK3-pf-RGc" id="VLs-xg-Fg8"/>
